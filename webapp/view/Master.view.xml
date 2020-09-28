@@ -1,0 +1,42 @@
+<mvc:View controllerName="MasterDetails.Navigation.controller.Master" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="master">
+			<pages>
+				<Page id="page" title="Master">
+					<content>
+						<SearchField width="90%" liveChange="onSearch" class="sapUiSmallMargin" />
+						<ScrollContainer
+							height="80%"
+							width="100%"
+							horizontal="true"
+							vertical="true"
+							focusable="true">
+											
+							<List
+								id="ID_LIST_MASTER"
+								headerText="Employee"
+								includeItemInSelection="true"
+								selectionChange="onEmpListPress"
+								
+								items="{
+							         path : 'MasterModel>/results',
+							         sorter : {
+							            path : 'FirstName' 
+							         }
+							      }"
+								mode="MultiSelect">
+								
+									<StandardListItem
+										title="{MasterModel>FirstName}"
+										description="{MasterModel>Address}"
+										icon="{MasterModel>PhotoPath}"/>
+								
+								
+							</List>
+						</ScrollContainer>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

@@ -1,0 +1,44 @@
+<mvc:View controllerName="MasterDetails.Navigation.controller.Detail" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+	<Shell id="shell">
+		<App id="detail">
+			<pages>
+				<Page id="page" title="Details">
+					<content>
+						<VBox class="sapUiSmallMargin">
+							<f:SimpleForm id="empForm"
+								
+								editable="true"
+								layout="ResponsiveGridLayout"
+								title="{i18n>empInfo}"
+								labelSpanXL="3"
+								labelSpanL="3"
+								labelSpanM="3"
+								labelSpanS="12"
+								adjustLabelSpan="false"
+								emptySpanXL="4"
+								emptySpanL="4"
+								emptySpanM="4"
+								emptySpanS="0"
+								columnsXL="1"
+								columnsL="1"
+								columnsM="1"
+								singleContainerFullSize="false" >
+								<f:content>
+									<Label text="Fisrt Name" />
+									<Input id="fname" value="{MasterModel>/FirstName}" />
+									<Label text="Last Name" />
+									<Input id="lname" value="{MasterModel>/LastName}" />
+									<Label text="Address"/>
+									<TextArea id="address" value="{MasterModel>/Address}, {MasterModel>/City}, {MasterModel>/Country}, {MasterModel>/PostalCode}" />
+									<Label text="Phone Number" />
+									<Input id="phno" value="{MasterModel>/HomePhone}" />
+									
+								</f:content>
+							</f:SimpleForm>	
+						</VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

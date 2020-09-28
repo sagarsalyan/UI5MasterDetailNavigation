@@ -1,0 +1,12 @@
+<mvc:View controllerName="MasterDetails.Navigation.controller.Split" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="split">
+			<SplitContainer id="ID_SPLITAPP">
+				<masterPages>
+				</masterPages>
+				<detailPages>
+				</detailPages>
+			</SplitContainer>
+		</App>
+	</Shell>
+</mvc:View>
